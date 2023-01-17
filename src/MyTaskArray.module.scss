@@ -1,0 +1,66 @@
+@import './variables';
+
+.container {
+	
+	min-width: fit-content;
+
+	.form {
+		height: min-content;
+		text-align: center;
+
+		.input {
+			padding: $half-spacing-unit/2;
+		}
+
+		.button {
+			border: none;
+			border-radius: 4px;
+			padding: $half-spacing-unit/2;
+			margin-left: $half-spacing-unit;
+			color: $color-text-header;
+			background-color: $color-header-back;
+			cursor: pointer;
+
+			&:hover {
+				background-color: lighten($color-header-back, 20%)
+			}
+		}
+	}
+
+	.table {
+		width: 1000px;
+		text-align: center;
+		border: 1px solid $color-form-border;
+
+		.tableHeader {
+			display: flex;
+			color: $color-text-header;
+			background-color: $color-header-back;
+			padding: $half-spacing-unit;
+			cursor: pointer;
+		}
+
+		.tableRow {
+			display: flex;
+			padding: $half-spacing-unit;
+
+			&:nth-of-type(odd) {
+				background-color: $color-nth-row;
+			}
+		}
+
+		.tableData {
+			flex: 1 1 20%;
+			text-align: center;
+		}
+	}
+
+	.bottomInfo {
+		font-size: $base-spacing-unit;
+
+		margin: {
+			top: $half-spacing-unit;
+			left: $half-spacing-unit;
+		}
+	}
+}
